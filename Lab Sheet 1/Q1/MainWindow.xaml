@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListBox x:Name="lstbxBands" HorizontalAlignment="Left" Height="273" Margin="50,107,0,0" VerticalAlignment="Top" Width="209"/>
+        <ComboBox x:Name="cbxGenre" HorizontalAlignment="Left" Margin="139,68,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="tblkGenre" HorizontalAlignment="Left" Margin="50,74,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkBands" HorizontalAlignment="Left" Margin="78,31,0,0" TextWrapping="Wrap" Text="Bands" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock x:Name="tblkBandInformation" HorizontalAlignment="Left" Margin="520,31,0,0" TextWrapping="Wrap" Text="Band Information" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock x:Name="tblkFormed" HorizontalAlignment="Left" Margin="520,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Formed:"/>
+        <TextBlock x:Name="tblkMembers" HorizontalAlignment="Left" Margin="520,146,0,0" TextWrapping="Wrap" Text="Members:" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxFormed" HorizontalAlignment="Left" Height="23" Margin="578,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxMembers" HorizontalAlignment="Left" Height="140" Margin="578,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="tblkAlbums" HorizontalAlignment="Left" Margin="345,31,0,0" TextWrapping="Wrap" Text="Albums" VerticalAlignment="Top" FontSize="24"/>
+        <ListBox x:Name="lstbxAlbums" HorizontalAlignment="Left" Height="216" Margin="305,107,0,0" VerticalAlignment="Top" Width="164"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="394,342,0,0" VerticalAlignment="Top" Width="75"/>
+
     </Grid>
 </Window>
