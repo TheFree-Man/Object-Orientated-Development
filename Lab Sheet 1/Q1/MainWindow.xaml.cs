@@ -39,6 +39,44 @@ namespace Q1
             IndieBand b5 = new IndieBand() { BandName = "Artic Monkeys", YearFormed = 2002, Members = "Alex Turner, Matt Heldens, Jamie Cook, Nick O'Malley" };
             IndieBand b6 = new IndieBand() { BandName = "The Strokes", YearFormed = 1998, Members = "Julien Casablancas, Nick Valensi, Albert Hammond Jr, Nikolai Frature, Fabrizio Moretti" };
 
+            Random rand = new Random();
+
+            Album a1 = new Album() { Name = "Greatest Hits", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+            Album a2 = new Album() { Name = "One by One", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+
+            Album a3 = new Album() { Name = "Sticky Fingers", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+            Album a4 = new Album() { Name = "Blue and Lonesome", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+
+            Album a5 = new Album() { Name = "Sgt. Pepper's Lonely Hearts Club Band", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+            Album a6 = new Album() { Name = "White Album", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+
+            Album a7 = new Album() { Name = "Dookie", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+            Album a8 = new Album() { Name = "American Idiot", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+
+            Album a9 = new Album() { Name = "Whatever People Say I am, That's What I'm not", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+            Album a10 = new Album() { Name = "Favourite Worst Nightmare", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+
+            Album a11 = new Album() { Name = "Room on Fire", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+            Album a12 = new Album() { Name = "The Modern Age", YearOfRelease = rand.Next(1960, 2020), Sales = rand.Next(1000000, 10000000) };
+
+            b1.AlbumList.Add(a1);
+            b1.AlbumList.Add(a2);
+
+            b2.AlbumList.Add(a3);
+            b2.AlbumList.Add(a4);
+
+            b3.AlbumList.Add(a5);
+            b3.AlbumList.Add(a6);
+
+            b4.AlbumList.Add(a7);
+            b4.AlbumList.Add(a8);
+
+            b5.AlbumList.Add(a9);
+            b5.AlbumList.Add(a10);
+
+            b6.AlbumList.Add(a11);
+            b6.AlbumList.Add(a12);
+
             allBands.Add(b1);
             allBands.Add(b2);
             allBands.Add(b3);
@@ -49,6 +87,16 @@ namespace Q1
             allBands.Sort();
             
             lstbxBands.ItemsSource = allBands;
+        }
+
+        private void lstbxBands_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Band selectedBand = lstbxBands.SelectedItem as Band;
+
+            if (selectedBand != null)
+            {
+                lstbxAlbums.ItemsSource = selectedBand.AlbumList;
+            }
         }
     }
 }

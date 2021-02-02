@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lstbxBands" HorizontalAlignment="Left" Height="273" Margin="50,107,0,0" VerticalAlignment="Top" Width="209"/>
+        <ListBox x:Name="lstbxBands" HorizontalAlignment="Left" Height="273" Margin="50,107,0,0" VerticalAlignment="Top" Width="209" SelectionChanged="lstbxBands_SelectionChanged"/>
         <ComboBox x:Name="cbxGenre" HorizontalAlignment="Left" Margin="139,68,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="tblkGenre" HorizontalAlignment="Left" Margin="50,74,0,0" TextWrapping="Wrap" Text="Genre" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkBands" HorizontalAlignment="Left" Margin="78,31,0,0" TextWrapping="Wrap" Text="Bands" VerticalAlignment="Top" FontSize="24"/>

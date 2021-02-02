@@ -14,17 +14,18 @@ namespace Q1
 
         public string Members { get; set; }
 
+        public List<Album> AlbumList { get; set; }
+
         public Band(string bandName, int yearFormed, string members)
         {
             BandName = bandName;
             YearFormed = yearFormed;
             Members = members;
+
+            AlbumList = new List<Album>();
         }
 
-        public Band()
-        {
-
-        }
+        public Band() : this("Unknown", 1960, "Unknown") { }
 
         public override string ToString()
         {
