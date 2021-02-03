@@ -1,0 +1,27 @@
+﻿<Window x:Class="Game_Database.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game_Database"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lstbx_Games" HorizontalAlignment="Left" Height="275" Margin="40,113,0,0" VerticalAlignment="Top" Width="175"/>
+        <ComboBox x:Name="cbxGenre" HorizontalAlignment="Left" Margin="95,75,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxGenre_SelectionChanged"/>
+        <TextBlock x:Name="tblkSortBy" HorizontalAlignment="Left" Margin="40,81,0,0" TextWrapping="Wrap" Text="Sort By: " VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbSingleplayer" Content="Singleplayer" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbMultiplayer" Content="Multiplayer" HorizontalAlignment="Left" Margin="136,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.021,-0.188"/>
+        <TextBox x:Name="tbxDescription" HorizontalAlignment="Left" Height="130" Margin="550,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Margin="475,114,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="0.831,0.18"/>
+        <TextBox x:Name="tbxReviews" HorizontalAlignment="Left" Height="130" Margin="550,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock x:Name="tblkReviews" HorizontalAlignment="Left" Margin="493,259,0,0" TextWrapping="Wrap" Text="Reviews" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkName" HorizontalAlignment="Left" Margin="230,114,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Height="23" Margin="335,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="tblkCreatedBy" HorizontalAlignment="Left" Margin="230,150,0,0" TextWrapping="Wrap" Text="Created By" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkMetacriticRating" HorizontalAlignment="Left" Margin="230,186,0,0" TextWrapping="Wrap" Text="Metacritic Rating" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbxMetacriticRating" HorizontalAlignment="Left" Height="23" Margin="335,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tblkCreatedBy1" HorizontalAlignment="Left" Height="23" Margin="335,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
