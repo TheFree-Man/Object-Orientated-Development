@@ -1,0 +1,7 @@
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q1\bin\Debug\Q1.exe.config
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q1\bin\Debug\Q1.exe
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q1\bin\Debug\Q1.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q1\obj\Debug\Q1.csprojAssemblyReference.cache
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q1\obj\Debug\Q1.csproj.CoreCompileInputs.cache
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q1\obj\Debug\Q1.exe
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q1\obj\Debug\Q1.pdb
