@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Game_Database"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lstbx_Games" HorizontalAlignment="Left" Height="275" Margin="40,113,0,0" VerticalAlignment="Top" Width="175"/>
+        <ListBox x:Name="lstbx_Games" HorizontalAlignment="Left" Height="275" Margin="40,113,0,0" VerticalAlignment="Top" Width="175" SelectionChanged="lstbx_Games_SelectionChanged"/>
         <ComboBox x:Name="cbxGenre" HorizontalAlignment="Left" Margin="95,75,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxGenre_SelectionChanged"/>
         <TextBlock x:Name="tblkSortBy" HorizontalAlignment="Left" Margin="40,81,0,0" TextWrapping="Wrap" Text="Sort By: " VerticalAlignment="Top"/>
         <RadioButton x:Name="rbSingleplayer" Content="Singleplayer" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top"/>
