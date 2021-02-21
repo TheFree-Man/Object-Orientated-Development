@@ -1,0 +1,7 @@
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q6\bin\Debug\Q6.exe.config
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q6\bin\Debug\Q6.exe
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q6\bin\Debug\Q6.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q6\obj\Debug\Q6.csprojAssemblyReference.cache
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q6\obj\Debug\Q6.csproj.CoreCompileInputs.cache
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q6\obj\Debug\Q6.exe
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 2\Q6\obj\Debug\Q6.pdb
