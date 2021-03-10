@@ -20,9 +20,18 @@ namespace Q1
     /// </summary>
     public partial class MainWindow : Window
     {
+        NORTHWINDEntities db = new NORTHWINDEntities
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            lstbxStockList.ItemsSource = Enum.GetNames(typeof(StockLevel));
+
+            var query 1 = from s in db.Suppliers
         }
     }
 }
