@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="15a9437a00b044f79f08dc58edd7dd78" Name="Diagram1" >
         <EntityTypeShape EntityType="Model1.Band" Width="1.5" PointX="1.5" PointY="1.25" />
+        <EntityTypeShape EntityType="Model1.Album" Width="1.5" PointX="5" PointY="1.5" />
+        <AssociationConnector Association="Model1.BandAlbum" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
