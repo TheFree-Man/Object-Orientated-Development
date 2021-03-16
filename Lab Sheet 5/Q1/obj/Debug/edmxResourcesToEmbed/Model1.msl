@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Bands">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Band)">
+        <MappingFragment StoreEntitySet="Bands">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="YearFormed" ColumnName="YearFormed" />
+          <ScalarProperty Name="Members" ColumnName="Members" />
+          <ScalarProperty Name="BandImage" ColumnName="BandImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Album)">
+        <MappingFragment StoreEntitySet="Albums">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Released" ColumnName="Released" />
+          <ScalarProperty Name="Sales" ColumnName="Sales" />
+          <ScalarProperty Name="AlbumImage" ColumnName="AlbumImage" />
+          <ScalarProperty Name="BandId" ColumnName="BandId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="BandAlbum" TypeName="Model1.BandAlbum" StoreEntitySet="Albums">
+      <EndProperty Name="Band">
+        <ScalarProperty Name="Id" ColumnName="Band_Id" />
+      </EndProperty>
+      <EndProperty Name="Album">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

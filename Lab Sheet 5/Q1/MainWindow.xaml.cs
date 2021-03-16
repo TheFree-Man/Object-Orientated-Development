@@ -20,9 +20,36 @@ namespace Q1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Model1Container db;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            db = new Model1Container();
+
+            var query = from a in db.Bands
+                        select a;
+
+            lstbxBands.ItemsSource = query.ToList();
+        }
+
+        private void lstbxBands_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Band selectedBand = lstbxBands.SelectedItem as Band;
+
+            if (selectedBand != null)
+            {
+                var query = from b in db.Albums
+                            where b.BandId == selectedBand.Id
+                            select b.Name;
+
+                lstbxAlbums.ItemsSource = query.ToList();
+            }
         }
     }
 }

@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Q1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <DataTemplate x:Key="lstbxBandTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=Image}" Height="100"/>
+                <TextBlock Text="{Binding Path=Name}" FontSize="20" Margin="10"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    
     <Grid>
-        
+        <ListBox ItemTemplate="{StaticResource lstbxBandTemplate}" x:Name="lstbxBands" HorizontalAlignment="Left" Height="359" Margin="25,40,0,0" VerticalAlignment="Top" Width="350" SelectionChanged="lstbxBands_SelectionChanged"/>
+        <ListBox x:Name="lstbxAlbums" HorizontalAlignment="Left" Height="359" Margin="417,40,0,0" VerticalAlignment="Top" Width="350"/>
+
     </Grid>
 </Window>

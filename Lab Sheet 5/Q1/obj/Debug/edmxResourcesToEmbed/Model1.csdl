@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bands" EntityType="Model1.Band" />
+    <EntitySet Name="Albums" EntityType="Model1.Album" />
+    <AssociationSet Name="BandAlbum" Association="Model1.BandAlbum">
+      <End Role="Band" EntitySet="Bands" />
+      <End Role="Album" EntitySet="Albums" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Band">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="YearFormed" Type="String" Nullable="false" />
+    <Property Name="Members" Type="String" Nullable="false" />
+    <Property Name="BandImage" Type="String" Nullable="false" />
+    <NavigationProperty Name="Albums" Relationship="Model1.BandAlbum" FromRole="Band" ToRole="Album" />
+  </EntityType>
+  <EntityType Name="Album">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Released" Type="String" Nullable="false" />
+    <Property Name="Sales" Type="String" Nullable="false" />
+    <Property Name="AlbumImage" Type="String" Nullable="false" />
+    <Property Name="BandId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Band" Relationship="Model1.BandAlbum" FromRole="Album" ToRole="Band" />
+  </EntityType>
+  <Association Name="BandAlbum">
+    <End Type="Model1.Band" Role="Band" Multiplicity="1" />
+    <End Type="Model1.Album" Role="Album" Multiplicity="*" />
+  </Association>
+</Schema>
