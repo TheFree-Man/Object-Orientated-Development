@@ -24,5 +24,21 @@ namespace Q1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from c in db.Categories
+                        join p in db.products on c.CategoryName equals p.Category.CategoryName
+                        orderby c.CategoryName
+                        select new { Category = c.CategoryName, Product = p.ProductName };
+
+            var results = query.ToList();
+
+            Ex1DvgDisplay.itemsource = results;
+
+            Ex1TblkCount.Text = results.Count.ToString();
+        }
     }
+
+    
 }
