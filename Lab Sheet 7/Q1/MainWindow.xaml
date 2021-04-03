@@ -79,7 +79,7 @@
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
-                    <ListBox Grid.Row="1" x:Name="Ex6LbxDisplay" SelectionChanged="Ex6LbxDisplay_SelectionChanged"/>
+                    <ListBox Grid.Row="1" x:Name="Ex6LbxDisplay"/>
                     <TextBlock x:Name="Ex6TblkDetails" Grid.Column="2" Margin="10"/>
                     <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex6Button" Click="Ex6Button_Click"/>
                 </Grid>
