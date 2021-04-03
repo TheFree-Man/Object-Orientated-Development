@@ -13,3 +13,11 @@ C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\obj\Debug\Q1.csproj.CoreCompileInputs.cache
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\obj\Debug\Q1.exe
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\obj\Debug\Q1.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\bin\Debug\NORTHWND.MDF
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\bin\Debug\NORTHWND_log.ldf
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\bin\Debug\EntityFramework.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\bin\Debug\EntityFramework.xml
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\obj\Debug\Q1_Content.g.cs
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 6\Q1\obj\Debug\Q1.csproj.CopyComplete
