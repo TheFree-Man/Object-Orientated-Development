@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl TabStripPlacement="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="172*"/>
+            <ColumnDefinition Width="621*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl TabStripPlacement="Top" Grid.ColumnSpan="2">
 
             <TabItem Header="Ex1" Width="75">
                 <Grid>
@@ -67,7 +71,7 @@
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
-                    <DataGrid Grid.Row="1" x:Name="Ex5DGDisplay"/>
+                    <TextBlock Grid.Row="1" x:Name="Ex5TblkDisplay"/>
                     <TextBlock x:Name="Ex5TblkDetails" Grid.Column="2" Margin="10"/>
                     <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex5Button" Click="Ex5Button_Click"/>
                 </Grid>
@@ -79,7 +83,7 @@
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
-                    <ListBox Grid.Row="1" x:Name="Ex6LbxDisplay"/>
+                    <DataGrid Grid.Row="1" x:Name="Ex6DGDisplay"/>
                     <TextBlock x:Name="Ex6TblkDetails" Grid.Column="2" Margin="10"/>
                     <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex6Button" Click="Ex6Button_Click"/>
                 </Grid>
@@ -94,6 +98,30 @@
                     <DataGrid Grid.Row="1" x:Name="Ex7DGDisplay"/>
                     <TextBlock x:Name="Ex7TblkDetails" Grid.Column="2" Margin="10"/>
                     <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex7Button" Click="Ex7Button_Click"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Ex8" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Grid.Row="1" x:Name="Ex8DGDisplay"/>
+                    <TextBlock x:Name="Ex8TblkDetails" Grid.Column="2" Margin="10"/>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex8Button" Click="Ex8Button_Click"/>
+                </Grid>
+            </TabItem>
+            
+            <TabItem Header="Ex9" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Grid.Row="1" x:Name="Ex9DGDisplay"/>
+                    <TextBlock x:Name="Ex9TblkDetails" Grid.Column="2" Margin="10"/>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex9Button" Click="Ex9Button_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>

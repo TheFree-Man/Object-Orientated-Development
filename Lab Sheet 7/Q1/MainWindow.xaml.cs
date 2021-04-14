@@ -60,27 +60,93 @@ namespace Q1
 
         private void Ex3Button_Click(object sender, RoutedEventArgs e)
         {
+            var query = from p in db.Products
+                        where p.UnitsInStock - p.UnitsOnOrder > 0
+                        select new
+                        {
+                            Product = p.ProductName,
+                            Available = p.UnitsInStock
+                        };
 
+            Ex3DGDisplay.ItemsSource = query.ToList();
         }
 
         private void Ex4Button_Click(object sender, RoutedEventArgs e)
         {
+            var query = from o in db.Order_Details
+                        where o.Discount > 1
+                        select new
+                        {
+                            ProductName = o.Product.ProductName,
+                            DiscountGiven = o.Discount
+                        };
 
+            Ex4DGDisplay.ItemsSource = query.ToList();
         }
 
         private void Ex5Button_Click(object sender, RoutedEventArgs e)
         {
+            var query = (from o in db.Orders
+                        select o.Freight).Sum();
+
+            Ex3TblkDetails.Text = string.Format("Value of Orders {1:C}}", query);
 
         }
 
         private void Ex6Button_Click(object sender, RoutedEventArgs e)
         {
+            var query = from p in db.Products
+                        orderby p.UnitPrice descending
+                        select new
+                        {
+                            CategoryID = p.CategoryID,
+                            CategoryName = p.Category.CategoryName,
+                            ProductName = p.ProductName,
+                            UnitPrice = p.UnitPrice
+                        };
 
+            Ex6DGDisplay.ItemsSource = query.ToList();
         }
 
         private void Ex7Button_Click(object sender, RoutedEventArgs e)
         {
+            var query = from c in db.Order_Details
+                        group c by c.Order.OrderID into g
+                        orderby g.Count() descending
+                        select new
+                        {
+                            CustomerID = g.Key,
+                            NumberOfOrders = g.Count()
 
+                        };
+
+            Ex7DGDisplay.ItemsSource = query.ToList();
+        }
+
+        private void Ex8Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from c in db.Order_Details
+                        group c by c.Order.OrderID into g
+                        orderby g.Count() descending
+                        select new
+                        {
+                            CustomerID = g.Key,
+                            NumberOfOrders = g.Count()
+
+                        };
+
+            Ex8DGDisplay.ItemsSource = query.ToList();
+        }
+
+        private void Ex9Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from c in db.Customers
+                        //where c.Order_Details.Quantity == 0
+                        select new
+                        {
+                            CompanyName = c.CompanyName,
+                            //NumberOfOrders = c.Order_Details.Quantity
+                        };
         }
     }
 }
