@@ -1,0 +1,15 @@
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\DataManagement.exe.config
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\DataManagement.exe
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\DataManagement.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\EntityFramework.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\Q1.exe
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\Q1.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\Q1.exe.config
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\EntityFramework.xml
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\obj\Debug\DataManagement.csprojAssemblyReference.cache
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\obj\Debug\DataManagement.csproj.CoreCompileInputs.cache
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\obj\Debug\DataManagement.csproj.CopyComplete
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\obj\Debug\DataManagement.exe
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Lab Sheet 8\DataManagement\obj\Debug\DataManagement.pdb
