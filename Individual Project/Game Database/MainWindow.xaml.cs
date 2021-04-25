@@ -21,6 +21,8 @@ namespace Game_Database
     /// </summary>
     public partial class MainWindow : Window
     {
+        Model1Container db = new Model1Container();
+
         List<GameDB> allGames = new List<GameDB>();
 
         public MainWindow()
@@ -30,6 +32,7 @@ namespace Game_Database
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            /*
             FPS g1 = new FPS() { GameName = "Half-Life: Alyx", CreatedBy = "Valve Software", MetacriticRating = 93 };
             FPS g2 = new FPS() { GameName = "F.E.A.R", CreatedBy = "Monolith Productions", MetacriticRating = 88 };
 
@@ -57,6 +60,16 @@ namespace Game_Database
             allGames.Add(g10);
 
             lstbx_Games.ItemsSource = allGames;
+            */
+
+            var query = from n in db.Games
+                        select new
+                        {
+                            Name = n.Name
+                        };
+            var results = query.ToList();
+
+            lstbx_Games.ItemsSource = results;
         }
 
         private void cbxGenre_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Games" EntityType="Model1.Game" />
+    <EntitySet Name="Reviews" EntityType="Model1.Review" />
+    <AssociationSet Name="GameReview" Association="Model1.GameReview">
+      <End Role="Game" EntitySet="Games" />
+      <End Role="Review" EntitySet="Reviews" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="DevelopedBy" Type="String" Nullable="false" />
+    <Property Name="MetacriticRating" Type="String" Nullable="false" />
+    <Property Name="Genre" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <NavigationProperty Name="Reviews" Relationship="Model1.GameReview" FromRole="Game" ToRole="Review" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Reviwer" Type="String" Nullable="false" />
+    <Property Name="Content" Type="String" Nullable="false" />
+    <NavigationProperty Name="Game" Relationship="Model1.GameReview" FromRole="Review" ToRole="Game" />
+    <Property Name="GameId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="GameReview">
+    <End Type="Model1.Game" Role="Game" Multiplicity="1" />
+    <End Type="Model1.Review" Role="Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Game">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Review">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

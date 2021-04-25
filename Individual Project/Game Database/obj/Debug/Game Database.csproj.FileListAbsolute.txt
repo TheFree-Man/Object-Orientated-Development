@@ -13,3 +13,9 @@ C:\Users\MCGC2\Source\Repos\TheFree-Man\Object-Orientated-Development\Individual
 C:\Users\MCGC2\Source\Repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\obj\Debug\Game Database.csproj.CoreCompileInputs.cache
 C:\Users\MCGC2\Source\Repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\obj\Debug\Game Database.exe
 C:\Users\MCGC2\Source\Repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\obj\Debug\Game Database.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\bin\Debug\EntityFramework.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\bin\Debug\EntityFramework.xml
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\obj\Debug\Game Database_Content.g.cs
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Individual Project\Game Database\obj\Debug\Game Database.csproj.CopyComplete

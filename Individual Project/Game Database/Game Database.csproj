@@ -139,6 +139,7 @@
       <LastGenOutput>Games.Context.cs</LastGenOutput>
       <DependentUpon>Games.edmx</DependentUpon>
     </Content>
+    <Content Include="Games.edmx.sql" />
     <Content Include="Games.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Games.cs</LastGenOutput>
