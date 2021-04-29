@@ -62,14 +62,10 @@ namespace Game_Database
             lstbx_Games.ItemsSource = allGames;
             */
 
-            var query = from n in db.Games
-                        select new
-                        {
-                            Name = n.Name
-                        };
-            var results = query.ToList();
+            var lstbxGamesQuery = from n in db.Games
+                                  select n;
 
-            lstbx_Games.ItemsSource = results;
+            lstbx_Games.ItemsSource = lstbxGamesQuery.ToList();
         }
 
         private void cbxGenre_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -79,7 +75,28 @@ namespace Game_Database
 
         private void lstbx_Games_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            GameDB selectedGame = lstbx_Games.SelectedItem as GameDB;
+            Game selectedGame = lstbx_Games.SelectedItem as Game;
+
+            var gameQuery = from n in db.Games
+                                 where n.Id == selectedGame.Id
+                                 select n;
+
+            var gameResults = gameQuery.ToList();
+
+            tbxName.ItemsSource = gameResults;
+            tbxCreatedBy.ItemsSource = gameResults;
+            tbxMetacriticRating.ItemsSource = gameResults;
+            tbxDescription.ItemsSource = gameResults;
+
+            var reviewQuery = from r in db.Reviews
+                                 where r.GameId == selectedGame.Id
+                                 select r;
+
+            var reviewResults = reviewQuery.ToList();
+            tbxReviews.Text = reviewResults;
+
+
+
         }
     }
 }

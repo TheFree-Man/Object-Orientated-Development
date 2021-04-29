@@ -6,22 +6,58 @@
         xmlns:local="clr-namespace:Game_Database"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="tbxNameTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=Name}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="tbxCreatedByTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=DevelopedBy}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="tbxMetacriticRatingTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=MetacriticRating}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="tbxDescriptionTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=Description}" TextWrapping="Wrap"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="tbxReviewerTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=Reviewer}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
-        <ListBox x:Name="lstbx_Games" HorizontalAlignment="Left" Height="275" Margin="40,113,0,0" VerticalAlignment="Top" Width="175" SelectionChanged="lstbx_Games_SelectionChanged"/>
-        <ComboBox x:Name="cbxGenre" HorizontalAlignment="Left" Margin="95,75,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxGenre_SelectionChanged"/>
-        <TextBlock x:Name="tblkSortBy" HorizontalAlignment="Left" Margin="40,81,0,0" TextWrapping="Wrap" Text="Sort By: " VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbSingleplayer" Content="Singleplayer" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbMultiplayer" Content="Multiplayer" HorizontalAlignment="Left" Margin="136,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.021,-0.188"/>
-        <TextBox x:Name="tbxDescription" HorizontalAlignment="Left" Height="130" Margin="550,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Margin="475,114,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="0.831,0.18"/>
-        <TextBox x:Name="tbxReviews" HorizontalAlignment="Left" Height="130" Margin="550,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <TextBlock x:Name="tblkReviews" HorizontalAlignment="Left" Margin="493,259,0,0" TextWrapping="Wrap" Text="Reviews" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkName" HorizontalAlignment="Left" Margin="230,114,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxName" HorizontalAlignment="Left" Height="23" Margin="335,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="tblkCreatedBy" HorizontalAlignment="Left" Margin="230,150,0,0" TextWrapping="Wrap" Text="Created By" VerticalAlignment="Top"/>
+        <ListBox x:Name="lstbx_Games"  HorizontalAlignment="Left" Height="275" Margin="20,113,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="lstbx_Games_SelectionChanged" DisplayMemberPath="Name"/>
+        <ComboBox x:Name="cbxGenre" HorizontalAlignment="Left" Margin="100,75,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxGenre_SelectionChanged">
+            <ListBoxItem Content="FPS"/>
+            <ListBoxItem Content="RPG"/>
+            <ListBoxItem Content="RTS"/>
+            <ListBoxItem Content="Adventure"/>
+            <ListBoxItem Content="Puzzle"/>
+        </ComboBox>
+        <TextBlock x:Name="tblkSortBy" HorizontalAlignment="Left" Margin="45,81,0,0" TextWrapping="Wrap" Text="Sort By: " VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbSingleplayer" Content="Singleplayer" HorizontalAlignment="Left" Margin="42,40,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbMultiplayer" Content="Multiplayer" HorizontalAlignment="Left" Margin="141,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.021,-0.188"/>
+        <ListBox ItemTemplate="{StaticResource tbxDescriptionTemplate}" x:Name="tbxDescription" HorizontalAlignment="Left" Height="130" Margin="572,78,0,0" VerticalAlignment="Top" Width="200" />
+        <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Margin="494,79,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="0.831,0.18"/>
+        <TextBox x:Name="tbxReviews" HorizontalAlignment="Left" Height="130" Margin="572,258,0,0" VerticalAlignment="Top" Width="200" TextWrapping="Wrap" />
+        <TextBlock x:Name="tblkReviews" HorizontalAlignment="Left" Margin="512,259,0,0" TextWrapping="Wrap" Text="Reviews" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkName" HorizontalAlignment="Left" Margin="288,114,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" RenderTransformOrigin="2.25,0.812"/>
+        <ListBox ItemTemplate="{StaticResource tbxNameTemplate}" x:Name="tbxName" HorizontalAlignment="Left" Height="23" Margin="335,113,0,0" VerticalAlignment="Top" Width="200" ScrollViewer.HorizontalScrollBarVisibility="Hidden" />
+        <TextBlock x:Name="tblkCreatedBy" HorizontalAlignment="Left" Margin="262,150,0,0" TextWrapping="Wrap" Text="Created By" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkMetacriticRating" HorizontalAlignment="Left" Margin="230,186,0,0" TextWrapping="Wrap" Text="Metacritic Rating" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbxMetacriticRating" HorizontalAlignment="Left" Height="23" Margin="335,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tblkCreatedBy1" HorizontalAlignment="Left" Height="23" Margin="335,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox ItemTemplate="{StaticResource tbxMetacriticRatingTemplate}" x:Name="tbxMetacriticRating" HorizontalAlignment="Left" Height="23" Margin="335,185,0,0" VerticalAlignment="Top" Width="200" />
+        <ListBox ItemTemplate="{StaticResource tbxCreatedByTemplate}" x:Name="tbxCreatedBy" HorizontalAlignment="Left" Height="23" Margin="335,149,0,0" VerticalAlignment="Top" Width="200" ScrollViewer.HorizontalScrollBarVisibility="Hidden" />
+        <ListBox ItemTemplate="{StaticResource tbxReviewerTemplate}" x:Name="tbxReviewer" HorizontalAlignment="Left" Height="23" Margin="572,222,0,0"  VerticalAlignment="Top" Width="200"/>
+        <TextBlock HorizontalAlignment="Left" Margin="507,223,0,0" TextWrapping="Wrap" Text="Reviewer" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
