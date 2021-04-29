@@ -45,7 +45,7 @@ namespace Q1
             if (selectedBand != null)
             {
                 var query = from b in db.Albums
-                            where b.BandId == selectedBand.Id
+                            where b.BandId == selectedBand.Id.ToString()
                             select b.Name;
 
                 lstbxAlbums.ItemsSource = query.ToList();

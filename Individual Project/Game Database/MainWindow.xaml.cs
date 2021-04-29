@@ -88,6 +88,8 @@ namespace Game_Database
             tbxCreatedBy.ItemsSource = gameResults;
             tbxMetacriticRating.ItemsSource = gameResults;
             tbxDescription.ItemsSource = gameResults;
+            lstbxCoverArt.ItemsSource = gameResults;
+
 
             var reviewQuery = from r in db.Reviews
                                  where r.GameId == selectedGame.Id

@@ -37,6 +37,11 @@
                 <TextBlock Text="{Binding Path=Content}"/>
             </StackPanel>
         </DataTemplate>
+        <DataTemplate x:Key="lstbxCoverArtTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=CoverArt}"/>
+            </StackPanel>
+        </DataTemplate>
     </Window.Resources>
 
     <Grid>
@@ -63,6 +68,7 @@
         <ListBox ItemTemplate="{StaticResource tbxCreatedByTemplate}" x:Name="tbxCreatedBy" HorizontalAlignment="Left" Height="23" Margin="335,149,0,0" VerticalAlignment="Top" Width="200" ScrollViewer.HorizontalScrollBarVisibility="Hidden" />
         <ListBox ItemTemplate="{StaticResource tbxReviewerTemplate}" x:Name="tbxReviewer" HorizontalAlignment="Left" Height="23" Margin="572,222,0,0"  VerticalAlignment="Top" Width="200"/>
         <TextBlock HorizontalAlignment="Left" Margin="507,223,0,0" TextWrapping="Wrap" Text="Reviewer" VerticalAlignment="Top"/>
+        <ListBox ItemTemplate="{StaticResource lstbxCoverArtTemplate}" x:Name="lstbxCoverArt" HorizontalAlignment="Left" Height="165" Margin="231,223,0,0" VerticalAlignment="Top" Width="272"/>
 
     </Grid>
 </Window>
