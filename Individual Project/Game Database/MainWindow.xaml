@@ -29,7 +29,12 @@
         </DataTemplate>
         <DataTemplate x:Key="tbxReviewerTemplate">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Path=Reviewer}"/>
+                <TextBlock Text="{Binding Path=Reviwer}"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="tbxReviewsTemplate">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Path=Content}"/>
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
@@ -48,7 +53,7 @@
         <RadioButton x:Name="rbMultiplayer" Content="Multiplayer" HorizontalAlignment="Left" Margin="141,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.021,-0.188"/>
         <ListBox ItemTemplate="{StaticResource tbxDescriptionTemplate}" x:Name="tbxDescription" HorizontalAlignment="Left" Height="130" Margin="572,78,0,0" VerticalAlignment="Top" Width="200" />
         <TextBlock x:Name="tblkDescription" HorizontalAlignment="Left" Margin="494,79,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" RenderTransformOrigin="0.831,0.18"/>
-        <TextBox x:Name="tbxReviews" HorizontalAlignment="Left" Height="130" Margin="572,258,0,0" VerticalAlignment="Top" Width="200" TextWrapping="Wrap" />
+        <ListBox ItemTemplate="{StaticResource tbxReviewsTemplate}" x:Name="tbxReviews" HorizontalAlignment="Left" Height="130" Margin="572,258,0,0" VerticalAlignment="Top" Width="200"/>
         <TextBlock x:Name="tblkReviews" HorizontalAlignment="Left" Margin="512,259,0,0" TextWrapping="Wrap" Text="Reviews" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkName" HorizontalAlignment="Left" Margin="288,114,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" RenderTransformOrigin="2.25,0.812"/>
         <ListBox ItemTemplate="{StaticResource tbxNameTemplate}" x:Name="tbxName" HorizontalAlignment="Left" Height="23" Margin="335,113,0,0" VerticalAlignment="Top" Width="200" ScrollViewer.HorizontalScrollBarVisibility="Hidden" />

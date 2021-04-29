@@ -76,6 +76,7 @@ namespace Game_Database
         private void lstbx_Games_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Game selectedGame = lstbx_Games.SelectedItem as Game;
+            Review selectedReview = lstbx_Games.SelectedItem as Review;
 
             var gameQuery = from n in db.Games
                                  where n.Id == selectedGame.Id
@@ -93,7 +94,8 @@ namespace Game_Database
                                  select r;
 
             var reviewResults = reviewQuery.ToList();
-            tbxReviews.Text = reviewResults;
+            tbxReviewer.ItemsSource = reviewResults;
+            tbxReviews.ItemsSource = reviewResults;
 
 
 
