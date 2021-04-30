@@ -19,6 +19,10 @@ namespace Game_Database
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
+    // Name: Mark Gilmartin
+    // Student Number S00198957
+    // Github Link: https://github.com/TheFree-Man/Object-Orientated-Development/tree/master/Individual%20Project
     public partial class MainWindow : Window
     {
         // Initialing database
