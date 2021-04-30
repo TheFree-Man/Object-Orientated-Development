@@ -21,8 +21,10 @@ namespace Game_Database
     /// </summary>
     public partial class MainWindow : Window
     {
+        // Initialing database
         Model1Container db = new Model1Container();
 
+        //Initialising list
         List<GameDB> allGames = new List<GameDB>();
 
         public MainWindow()
@@ -33,6 +35,7 @@ namespace Game_Database
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             /*
+            // Initialising Objects
             FPS g1 = new FPS() { GameName = "Half-Life: Alyx", CreatedBy = "Valve Software", MetacriticRating = 93 };
             FPS g2 = new FPS() { GameName = "F.E.A.R", CreatedBy = "Monolith Productions", MetacriticRating = 88 };
 
@@ -48,6 +51,7 @@ namespace Game_Database
             Puzzle g9 = new Puzzle() { GameName = "Baba is You", CreatedBy = "Hempuli Oy", MetacriticRating = 87 };
             Puzzle g10 = new Puzzle() { GameName = "Superliminal", CreatedBy = "Pillow Castle Games", MetacriticRating = 74 };
 
+            // Adding objects to games listbox
             allGames.Add(g1);
             allGames.Add(g2);
             allGames.Add(g3);
@@ -62,6 +66,7 @@ namespace Game_Database
             lstbx_Games.ItemsSource = allGames;
             */
 
+            // Querying Database to get list of games for games listbox
             var lstbxGamesQuery = from n in db.Games
                                   select n;
 
@@ -75,9 +80,11 @@ namespace Game_Database
 
         private void lstbx_Games_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // Initialising lists for database querying
             Game selectedGame = lstbx_Games.SelectedItem as Game;
             Review selectedReview = lstbx_Games.SelectedItem as Review;
 
+            // Querying database to get information for Name, Developers, Metacritic rating, and description textboxes
             var gameQuery = from n in db.Games
                                  where n.Id == selectedGame.Id
                                  select n;
@@ -90,12 +97,13 @@ namespace Game_Database
             tbxDescription.ItemsSource = gameResults;
             lstbxCoverArt.ItemsSource = gameResults;
 
-
+            // Querying database to get information for Reviwer name, and Review content textboxes
             var reviewQuery = from r in db.Reviews
                                  where r.GameId == selectedGame.Id
                                  select r;
 
             var reviewResults = reviewQuery.ToList();
+
             tbxReviewer.ItemsSource = reviewResults;
             tbxReviews.ItemsSource = reviewResults;
 

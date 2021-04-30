@@ -8,6 +8,7 @@ namespace Game_Database
 {
     public abstract class GameDB : IComparable
     {
+        // Initialising Game objects
         public string GameName { get; set; }
         public string CreatedBy { get; set; }
         public int MetacriticRating { get; set; }
@@ -19,6 +20,7 @@ namespace Game_Database
             MetacriticRating = metacriticRating;
         }
 
+        // Default layout if object displayed in the listbox
         public GameDB() : this ("Unknown", "Unknown", 71) { }
 
         public override string ToString()
@@ -33,6 +35,7 @@ namespace Game_Database
         }
     }
 
+    // Inherits original method and appends Genreto the end of each game
     public class FPS : GameDB
     {
         public override string ToString()

@@ -7,36 +7,46 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
+        <!--Adds a textbox inside the listbox in order to diaplay the data from the database-->
         <DataTemplate x:Key="tbxNameTemplate">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=Name}"/>
             </StackPanel>
         </DataTemplate>
+        
         <DataTemplate x:Key="tbxCreatedByTemplate">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=DevelopedBy}"/>
             </StackPanel>
         </DataTemplate>
+        
         <DataTemplate x:Key="tbxMetacriticRatingTemplate">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=MetacriticRating}"/>
             </StackPanel>
         </DataTemplate>
+        
+        <!--Also wraps text within the textbox in order to make the text more readable-->
         <DataTemplate x:Key="tbxDescriptionTemplate">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=Description}" TextWrapping="Wrap"/>
             </StackPanel>
         </DataTemplate>
+        
         <DataTemplate x:Key="tbxReviewerTemplate">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding Path=Reviwer}"/>
             </StackPanel>
         </DataTemplate>
+
+        <!--Also wraps text within the textbox in order to make the text more readable-->
         <DataTemplate x:Key="tbxReviewsTemplate">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Path=Content}"/>
+                <TextBlock Text="{Binding Path=Content}" TextWrapping="Wrap"/>  <!--The perameter for wrappng text is here but for whatever reason it doesn't want to-->
             </StackPanel>
         </DataTemplate>
+        
+        <!--Adds a textbox inside the listbox that contains the image in order to display data from the database-->
         <DataTemplate x:Key="lstbxCoverArtTemplate">
             <StackPanel Orientation="Horizontal">
                 <Image Source="{Binding Path=CoverArt}"/>
@@ -69,6 +79,5 @@
         <ListBox ItemTemplate="{StaticResource tbxReviewerTemplate}" x:Name="tbxReviewer" HorizontalAlignment="Left" Height="23" Margin="572,222,0,0"  VerticalAlignment="Top" Width="200"/>
         <TextBlock HorizontalAlignment="Left" Margin="507,223,0,0" TextWrapping="Wrap" Text="Reviewer" VerticalAlignment="Top"/>
         <ListBox ItemTemplate="{StaticResource lstbxCoverArtTemplate}" x:Name="lstbxCoverArt" HorizontalAlignment="Left" Height="165" Margin="231,223,0,0" VerticalAlignment="Top" Width="272"/>
-
     </Grid>
 </Window>
