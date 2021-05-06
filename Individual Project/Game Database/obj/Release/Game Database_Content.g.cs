@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("games.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("games.edmx.sql")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("games.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gamesdatabase.edmx.sql")]
 
