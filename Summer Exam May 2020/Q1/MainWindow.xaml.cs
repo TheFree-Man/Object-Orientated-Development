@@ -24,5 +24,11 @@ namespace Q1
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Phone p1 = new Phone("Huawei p20 Pro", 550, "Android", "", "");
+            Phone p2 = new Phone("iPhone 12 Pro Max", 1200, "iOS", "", "");
+        }
     }
 }
