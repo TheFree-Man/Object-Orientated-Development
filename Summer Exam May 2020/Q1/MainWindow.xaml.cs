@@ -30,5 +30,10 @@ namespace Q1
             Phone p1 = new Phone("Huawei p20 Pro", 550, "Android", "", "");
             Phone p2 = new Phone("iPhone 12 Pro Max", 1200, "iOS", "", "");
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
