@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,10 +29,21 @@ namespace Q1
             Phone_Image = phone_Image;
         }
 
+        public override string ToString()
+        {
+            return Name;
+        }
+
         public void IncreasePrice(double percentage)
         {
             Price += Price * percentage;
-        } 
+        }
+    }
 
+    public class PhoneData : DbContext
+    {
+        public PhoneData() : base("PhoneInformation") { }
+
+        public DbSet<Phone> Phones { get; set; }
     }
 }

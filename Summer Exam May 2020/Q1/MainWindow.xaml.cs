@@ -20,6 +20,8 @@ namespace Q1
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Phone> AllPhones;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,13 +29,28 @@ namespace Q1
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Phone p1 = new Phone("Huawei p20 Pro", 550, "Android", "", "");
-            Phone p2 = new Phone("iPhone 12 Pro Max", 1200, "iOS", "", "");
+            //Phone p1 = new Phone("Huawei p20 Pro", 550, "Android", "", "");
+            //Phone p2 = new Phone("iPhone 12 Pro Max", 1200, "iOS", "", "");
+
+            PhoneData db = new PhoneData();
+
+            var query = from p in db.Phones
+                        select p;
+
+            AllPhones = query.ToList();
+
+            lstbxPhone.ItemsSource = AllPhones;
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            Phone selectedPhone = lstbxPhone.SelectedItem as Phone;
 
+            if (selectedPhone != null)
+            {
+                imgPhone.Source = new BitmapImage(new Uri(selectedPhone.Phone_Image, UriKind.Relative));
+                tblkPrice.Text = $"{selectedPhone.Price:C}";
+            }
         }
     }
 }

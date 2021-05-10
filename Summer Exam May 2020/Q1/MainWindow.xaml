@@ -5,11 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Q1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
+
+    <Window.Resources>
+        <DataTemplate x:Key="listboxTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding OS_Image}"/>
+                <TextBlock Margin="5" Text="{Binding Name}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    
     <Grid>
-        <ListBox x:Name="lstbxPhone" HorizontalAlignment="Left" Height="281" Margin="110,76,0,0" VerticalAlignment="Top" Width="242" SelectionChanged="ListBox_SelectionChanged"/>
+        <ListBox ItemTemplate="{StaticResource ResourceKey=listboxTemplate}" x:Name="lstbxPhone" HorizontalAlignment="Left" Height="281" Margin="110,76,0,0" VerticalAlignment="Top" Width="242" SelectionChanged="ListBox_SelectionChanged"/>
         <TextBlock x:Name="tblkPrice" HorizontalAlignment="Left" Margin="448,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="270"/>
         <Image x:Name="imgPhone" HorizontalAlignment="Left" Height="224" Margin="448,133,0,0" VerticalAlignment="Top" Width="270"/>
-
     </Grid>
 </Window>
