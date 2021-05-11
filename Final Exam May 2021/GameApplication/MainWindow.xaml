@@ -10,8 +10,9 @@
     <Window.Resources>
         <DataTemplate x:Key="listboxTemplate">
             <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding Game_Image}" Height="30"/>
+                <Image Source="{Binding Game_Image}" Height="100"/>
                 <TextBlock Margin="1" Text="{Binding Name}" VerticalAlignment="Center"/>
+                <TextBlock Margin="10" Text="{Binding MetariticScore}" VerticalAlignment="Center"/>
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
