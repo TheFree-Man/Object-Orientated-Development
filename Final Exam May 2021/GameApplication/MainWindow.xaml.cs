@@ -20,9 +20,41 @@ namespace GameApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Game> AllGames;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Game.GameData db = new Game.GameData();
+
+            string[] platforms = { "All", "PC, Xbox, PS, Switch", "PS", "Xbox", "Switch" };
+            cbxPlatform.ItemsSource = platforms;
+
+            var query = from g in db.Games
+                        select g;
+
+            AllGames = query.ToList();
+
+            lstbxGames.ItemsSource = AllGames;
+        }
+
+        private void cbxPlatform_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Game.GameData db = new Game.GameData();
+
+            lstbxGames.ItemsSource = null;
+
+            var query = from g in db.Games
+                        where cbxPlatform.SelectedItem.ToString() == g.Platform
+                        select g;
+
+            AllGames = query.ToList();
+            lstbxGames.ItemsSource = AllGames;
+
         }
     }
 }

@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <DataTemplate x:Key="listboxTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Game_Image}" Height="30"/>
+                <TextBlock Margin="1" Text="{Binding Name}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid>
-        
+        <ListBox ItemTemplate="{StaticResource ResourceKey=listboxTemplate}" x:Name="lstbxGames" HorizontalAlignment="Left" Height="330" Margin="10,79,0,0" VerticalAlignment="Top" Width="308"/>
+        <TextBlock x:Name="tbxGames" HorizontalAlignment="Left" Margin="439,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="59" Width="293"/>
+        <Image x:Name="imgGames" HorizontalAlignment="Left" Height="255" Margin="439,122,0,0" VerticalAlignment="Top" Width="293"/>
+        <ComboBox x:Name="cbxPlatform" HorizontalAlignment="Left" Margin="176,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxPlatform_SelectionChanged"/>
+        <TextBlock x:Name="tblkPlatforms" HorizontalAlignment="Left" Margin="103,34,0,0" TextWrapping="Wrap" Text="Filter By:" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
