@@ -32,7 +32,7 @@ namespace GameApplication
             // Initial query to fill Listbox
             Game.GameData db = new Game.GameData();
 
-            string[] platforms = { "All", "PC, Xbox, PS, Switch", "PS", "Xbox", "Switch" };
+            string[] platforms = {"PC, Xbox, PS, Switch", "PS", "Xbox", "Switch" };
             cbxPlatform.ItemsSource = platforms;
 
             var query = from g in db.Games
@@ -65,9 +65,12 @@ namespace GameApplication
             Game.GameData db = new Game.GameData();
             Game selectedGame = lstbxGames.SelectedItem as Game;
 
-            tbxGames.Text = selectedGame.Price.ToString();
+            if (selectedGame != null)
+            {
+                tbxGames.Text = selectedGame.Price.ToString();
 
-            imgGames.Source = new BitmapImage(new Uri(selectedGame.Game_Image, UriKind.Relative));
+                imgGames.Source = new BitmapImage(new Uri(selectedGame.Game_Image, UriKind.Relative));
+            }
 
         }
     }
