@@ -16,6 +16,7 @@ namespace DataManagement
             
             using (db)
             {
+                // Adds items to the databasse
                 Game g1 = new Game()
                 {
                     Name = "It Takes Two",

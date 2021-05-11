@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800" 
+        Loaded="Window_Loaded"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
 
     <Window.Resources>
+        <!--displays image, name, and metacritic rating in listbox-->
         <DataTemplate x:Key="listboxTemplate">
             <StackPanel Orientation="Horizontal">
                 <Image Source="{Binding Game_Image}" Height="100"/>
@@ -18,7 +22,7 @@
     </Window.Resources>
 
     <Grid>
-        <ListBox ItemTemplate="{StaticResource ResourceKey=listboxTemplate}" x:Name="lstbxGames" HorizontalAlignment="Left" Height="330" Margin="10,79,0,0" VerticalAlignment="Top" Width="308"/>
+        <ListBox ItemTemplate="{StaticResource ResourceKey=listboxTemplate}" x:Name="lstbxGames" HorizontalAlignment="Left" Height="330" Margin="10,79,0,0" VerticalAlignment="Top" Width="308" SelectionChanged="lstbxGames_SelectionChanged"/>
         <TextBlock x:Name="tbxGames" HorizontalAlignment="Left" Margin="439,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="59" Width="293"/>
         <Image x:Name="imgGames" HorizontalAlignment="Left" Height="255" Margin="439,122,0,0" VerticalAlignment="Top" Width="293"/>
         <ComboBox x:Name="cbxPlatform" HorizontalAlignment="Left" Margin="176,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxPlatform_SelectionChanged"/>

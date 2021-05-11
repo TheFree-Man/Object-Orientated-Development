@@ -29,6 +29,7 @@ namespace GameApplication
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // Initial query to fill Listbox
             Game.GameData db = new Game.GameData();
 
             string[] platforms = { "All", "PC, Xbox, PS, Switch", "PS", "Xbox", "Switch" };
@@ -44,6 +45,7 @@ namespace GameApplication
 
         private void cbxPlatform_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // Filters games in the listbox by their platform
             Game.GameData db = new Game.GameData();
 
             lstbxGames.ItemsSource = null;
@@ -54,6 +56,18 @@ namespace GameApplication
 
             AllGames = query.ToList();
             lstbxGames.ItemsSource = AllGames;
+
+        }
+
+        private void lstbxGames_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Adds Image to imagebox and price to textbloxk
+            Game.GameData db = new Game.GameData();
+            Game selectedGame = lstbxGames.SelectedItem as Game;
+
+            tbxGames.Text = selectedGame.Price.ToString();
+
+            imgGames.Source = new BitmapImage(new Uri(selectedGame.Game_Image, UriKind.Relative));
 
         }
     }

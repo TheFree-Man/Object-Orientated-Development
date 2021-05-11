@@ -9,6 +9,7 @@ namespace GameApplication
 {
     public class Game
     {
+        // Properties for Games
         public string Name { get; set; }
         public int MetariticScore { get; set; }
         public string Description { get; set; }
@@ -22,6 +23,7 @@ namespace GameApplication
 
         }
 
+        // Initialising properties
         public Game(string name, int metacriticScore, string description, string platform, decimal price, string game_image)
         {
             Name = name;
@@ -32,11 +34,13 @@ namespace GameApplication
             Game_Image = game_image;
         }
 
+        // Decreases price by specified amount
         public void DecreasePrice(decimal priceDrop)
         {
-            Price -= Price * priceDrop;
+            Price -= priceDrop;
         }
 
+        // Connects Database
         public class GameData : DbContext
         {
             public GameData() : base("GameInformation") { }

@@ -18,3 +18,9 @@ C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\obj\Debug\GameApplication.csproj.CopyComplete
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\obj\Debug\GameApplication.exe
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\obj\Debug\GameApplication.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\bin\Debug\MaterialDesignColors.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\bin\Debug\MaterialDesignColors.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Final Exam May 2021\GameApplication\obj\Debug\App.baml
