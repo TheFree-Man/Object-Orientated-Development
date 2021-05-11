@@ -14,5 +14,20 @@ namespace GameApplication
         public string Platform { get; set; }
         public decimal Price { get; set; }
         public string Game_Image { get; set; }
+
+        public Game(string name, int metacriticScore, string description, string platform, decimal price, string game_image)
+        {
+            Name = name;
+            MetariticScore = metacriticScore;
+            Description = description;
+            Platform = platform;
+            Price = price;
+            Game_Image = game_image;
+        }
+
+        public void DecreasePrice(decimal priceDrop)
+        {
+            Price -= Price * priceDrop;
+        }
     }
 }
