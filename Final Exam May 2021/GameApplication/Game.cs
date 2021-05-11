@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,12 @@ namespace GameApplication
         public string Platform { get; set; }
         public decimal Price { get; set; }
         public string Game_Image { get; set; }
+        public int GameID { get; set; }
+
+        public Game()
+        {
+
+        }
 
         public Game(string name, int metacriticScore, string description, string platform, decimal price, string game_image)
         {
@@ -28,6 +35,13 @@ namespace GameApplication
         public void DecreasePrice(decimal priceDrop)
         {
             Price -= Price * priceDrop;
+        }
+
+        public class GameData : DbContext
+        {
+            public GameData() : base("GameInformation") { }
+
+            public DbSet<Game> Games { get; set; }
         }
     }
 }
