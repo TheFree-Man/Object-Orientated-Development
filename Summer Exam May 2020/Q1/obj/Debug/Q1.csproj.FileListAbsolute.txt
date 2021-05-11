@@ -18,3 +18,4 @@ C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Summer Exa
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Summer Exam May 2020\Q1\obj\Debug\Q1.csproj.CopyComplete
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Summer Exam May 2020\Q1\obj\Debug\Q1.exe
 C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Summer Exam May 2020\Q1\obj\Debug\Q1.pdb
+C:\Users\MCGC2\source\repos\TheFree-Man\Object-Orientated-Development\Summer Exam May 2020\Q1\obj\Debug\App.baml
